@@ -397,9 +397,9 @@ O projeto poderá ser ampliado com:
 **Integrantes:** 
 - 563512 — Felipe Maglio Filho
 - 564339 — João Pedro Bitencourt Goldoni
-- 561786 - Marina Tamagnini Magalhães
-- 564930 - Mateus Granja dos Santos
-- 563509 - Vitória Valentina Maglio
+- 561786 — Marina Tamagnini Magalhães
+- 564930 — Mateus Granja dos Santos
+- 563509 — Vitória Valentina Maglio
 
 ## 📦 Entrega
 
