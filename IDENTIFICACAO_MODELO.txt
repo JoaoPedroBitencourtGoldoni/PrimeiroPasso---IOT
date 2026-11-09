@@ -1,9 +1,10 @@
 GLOBAL SOLUTION 2026/2 — DISRUPTIVE ARCHITECTURES
 Projeto: PrimeiroPasso — EntrevistaLab
 Integrantes:
-- [RM] — [NOME COMPLETO]
-- [RM] — [NOME COMPLETO]
-- [Adicionar todos os integrantes]
-Repositório GitHub: https://github.com/SEU-USUARIO/SEU-REPOSITORIO
+- 563512 — Felipe Maglio Filho
+- 564339 — João Pedro Bitencourt Goldoni
+- 561786 - Marina Tamagnini Magalhães
+- 564930 - Mateus Granja dos Santos
+- 563509 - Vitória Valentina Maglio
+Repositório GitHub: https://github.com/JoaoPedroBitencourtGoldoni/PrimeiroPasso---IOT
 
-ATENÇÃO: substituir todos os campos antes do envio. Enviar somente este TXT preenchido no Portal FIAP.
