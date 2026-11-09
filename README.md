@@ -394,7 +394,12 @@ O projeto poderá ser ampliado com:
 
 **Disciplina:** Disruptive Architectures: IoT, IoB & Generative IA
 
-**Integrantes:** preencher com os nomes completos, RMs e turma dos participantes efetivos.
+**Integrantes:** 
+- 563512 — Felipe Maglio Filho
+- 564339 — João Pedro Bitencourt Goldoni
+- 561786 - Marina Tamagnini Magalhães
+- 564930 - Mateus Granja dos Santos
+- 563509 - Vitória Valentina Maglio
 
 ## 📦 Entrega
 
