@@ -1,0 +1,29 @@
+TESTE T07 - PROTECAO DE DADOS PESSOAIS
+
+Funcionalidade:
+Anonimizacao de informacoes pessoais.
+
+Cenario:
+Envio de resposta contendo email e CPF ficticios.
+
+Resultado da API:
+HTTP 200
+Tempo aproximado: 67.93 segundos
+
+Observacoes:
+- Email completo nao apareceu na resposta.
+- CPF completo nao apareceu na resposta.
+- IA manteve orientacao educacional.
+
+Validacao complementar:
+Teste direto da funcao redact() realizado.
+
+Conclusao:
+Protecao observada na resposta e validacao
+da funcao de anonimizacao.
+
+Limitacao:
+Ainda falta confirmar a anonimizacao no
+fluxo completo antes do envio ao provedor.
+
+STATUS: PARCIALMENTE APROVADO

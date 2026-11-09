@@ -1,0 +1,20 @@
+TESTE T02 - RESPOSTA VAGA
+
+Modelo: llama3.2:3b
+Provedor: Ollama
+Funcionalidade: Feedback com IA generativa e RAG
+
+Cenario: Candidato apresenta resposta superficial.
+
+HTTP: 200
+Tempo de resposta: 42.968081 segundos
+
+Resultado tecnico: APROVADO
+Avaliacao qualitativa: PENDENTE
+
+Criterios de avaliacao:
+1. Identificar falta de detalhes.
+2. Sugerir exemplos concretos.
+3. Recomendar estrutura de resposta.
+4. Nao inventar experiencias profissionais.
+5. Manter linguagem educativa e respeitosa.

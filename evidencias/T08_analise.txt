@@ -1,0 +1,28 @@
+TESTE T08 - ANONIMIZACAO ANTES DA IA
+
+Funcionalidade:
+Protecao de dados pessoais no fluxo da API.
+
+Objetivo:
+Verificar se CPF e email sao anonimizados
+antes da chamada ao modelo generativo.
+
+Metodo:
+Teste automatizado com pytest e mock da
+funcao generate().
+
+Resultado:
+1 passed, 1 warning in 0.18s
+
+Validacoes:
+- HTTP 200.
+- Email original ausente do prompt.
+- CPF original ausente do prompt.
+- Marcador [EMAIL] presente.
+- Marcador [CPF] presente.
+
+Conclusao:
+O fluxo testado anonimiza CPF e email antes
+da chamada ao modelo generativo.
+
+STATUS: APROVADO

@@ -1,0 +1,23 @@
+
+# Variaveis de ambiente e credenciais
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+
+# Ambiente virtual Python
+.venv/
+venv/
+
+# Cache Python e testes
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.coverage
+htmlcov/
+
+# Arquivos locais
+.vscode/
+.idea/
+.DS_Store

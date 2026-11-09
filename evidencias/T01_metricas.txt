@@ -1,0 +1,22 @@
+TESTE T01 - FEEDBACK DE ENTREVISTA
+
+Funcionalidade: Feedback com IA generativa e RAG
+Modelo: llama3.2:3b
+Provedor: Ollama
+Cenario: Resposta estruturada sobre trabalho em equipe
+
+HTTP: 200
+Tempo de resposta: 42.529357 segundos
+
+Resultado tecnico: APROVADO
+
+Fontes recuperadas:
+K01 - Metodo STAR - 0.2246
+K06 - Area administrativa - 0.1788
+K04 - Trabalho em equipe - 0.1694
+
+Observacoes:
+A IA retornou feedback com pontos fortes,
+melhorias e sugestoes de treinamento.
+
+Avaliacao qualitativa detalhada: pendente.

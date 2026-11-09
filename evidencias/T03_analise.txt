@@ -1,0 +1,30 @@
+TESTE T03 - CANDIDATO SEM EXPERIENCIA
+
+Funcionalidade: Feedback com IA generativa e RAG
+Modelo: llama3.2:3b
+Provedor: Ollama
+
+RESULTADO ORIGINAL
+HTTP: 200
+Tempo: 59.48 segundos
+Problema: IA inventou experiencias nao informadas.
+
+RESULTADO APOS CORRECAO
+HTTP: 200
+Tempo: 78.80 segundos
+
+MELHORIAS OBSERVADAS
+- Reconhecimento da ausencia de experiencia formal.
+- Linguagem educacional mais acolhedora.
+- Sugestoes de desenvolvimento de habilidades.
+- Orientacoes praticas para entrevistas.
+
+LIMITACOES IDENTIFICADAS
+- Persistencia de experiencias nao comprovadas.
+- Presenca do marcador [ID de contexto].
+- Aumento do tempo de resposta.
+
+CONCLUSAO
+Teste funcional aprovado.
+Teste qualitativo parcialmente aprovado.
+Necessario aprimorar a fidelidade factual da IA.

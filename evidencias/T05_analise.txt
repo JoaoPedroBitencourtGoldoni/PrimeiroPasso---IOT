@@ -1,0 +1,23 @@
+TESTE T05 - VALIDACAO DE RESPOSTA VAZIA
+
+Funcionalidade: Validacao de entrada da API
+Endpoint: POST /api/v1/entrevistas/feedback
+
+Cenario:
+Envio de uma resposta vazia para a API.
+
+Resultado esperado:
+HTTP 422 - Erro de validacao.
+
+Resultado obtido:
+HTTP 422
+Tempo: aproximadamente 0.003 segundos
+
+Mensagem:
+String should have at least 10 characters.
+
+AVALIACAO:
+A API rejeitou corretamente a entrada invalida.
+A validacao ocorreu antes da geracao de IA.
+
+STATUS: APROVADO

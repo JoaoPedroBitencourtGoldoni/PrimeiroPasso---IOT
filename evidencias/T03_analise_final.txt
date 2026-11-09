@@ -1,0 +1,45 @@
+GLOBAL SOLUTION 2026/2 - CITIZENTECH
+PRIMEIROPASSO | ENTREVISTALAB
+
+TESTE T03 - CANDIDATO SEM EXPERIENCIA
+
+Modelo: llama3.2:3b
+Provedor: Ollama
+Tecnologia: FastAPI + RAG
+
+RESULTADOS
+
+Versao original:
+HTTP 200
+Tempo: 59.48 segundos
+Problema: experiencias inventadas.
+
+Primeira correcao:
+HTTP 200
+Tempo: 78.80 segundos
+Problema: persistencia de alucinacoes.
+
+Versao final:
+HTTP 200
+Tempo: 61.62 segundos
+
+AVALIACAO QUALITATIVA FINAL
+
+- Reconhece habilidades transferiveis.
+- Nao inventa empregos ou projetos especificos.
+- Fornece orientacoes educacionais.
+- Apresenta sugestao de treinamento.
+- Reconhece limitacoes da resposta.
+- Nao apresenta marcador generico de fonte.
+
+CONCLUSAO
+
+Teste funcional aprovado.
+Revisao qualitativa principal aprovada.
+Melhoria observada apos refinamento dos prompts.
+
+LIMITACOES
+
+A IA ainda pode apresentar alucinacoes em outras entradas.
+A avaliacao humana continua necessaria.
+O tempo de resposta depende do hardware e do modelo.

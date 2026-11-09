@@ -1,0 +1,62 @@
+[
+  {
+    "id": "K01",
+    "titulo": "Método STAR",
+    "texto": "Uma resposta de entrevista pode ser estruturada em Situação, Tarefa, Ação e Resultado (STAR). Explique o contexto, sua responsabilidade, ações concretas e o que mudou. Se não houver resultado numérico, descreva o aprendizado sem inventar indicadores.",
+    "origem": "Material educativo original da equipe; referência conceitual ao método STAR"
+  },
+  {
+    "id": "K02",
+    "titulo": "Experiências acadêmicas",
+    "texto": "Para primeiro emprego, experiências escolares, projetos de faculdade, voluntariado e atividades comunitárias podem demonstrar organização, comunicação, colaboração e resolução de problemas. Não apresente projeto acadêmico como emprego formal.",
+    "origem": "Material educativo original da equipe"
+  },
+  {
+    "id": "K03",
+    "titulo": "Clareza e objetividade",
+    "texto": "Responda diretamente à pergunta, use um exemplo específico, evite generalidades e frases vagas. Prefira descrever sua contribuição pessoal e não apenas dizer que a equipe trabalhou bem.",
+    "origem": "Material educativo original da equipe"
+  },
+  {
+    "id": "K04",
+    "titulo": "Trabalho em equipe",
+    "texto": "Em perguntas sobre equipe, explique como dividiu tarefas, comunicou dificuldades, respeitou prazos e colaborou. Reconheça contribuições de outras pessoas e evite atribuir a si todo o resultado.",
+    "origem": "Material educativo original da equipe"
+  },
+  {
+    "id": "K05",
+    "titulo": "Dificuldades e aprendizado",
+    "texto": "Ao descrever desafios, apresente o problema, a iniciativa tomada e o aprendizado. Não invente conquistas. É válido reconhecer limites e explicar como buscou orientação.",
+    "origem": "Material educativo original da equipe"
+  },
+  {
+    "id": "K06",
+    "titulo": "Área administrativa",
+    "texto": "Em entrevistas para funções administrativas iniciais, exemplos de organização de planilhas, controle de prazos, atendimento e comunicação podem ilustrar competências. Apresente ferramentas que realmente utilizou.",
+    "origem": "Material educativo original da equipe"
+  },
+  {
+    "id": "K07",
+    "titulo": "Área de tecnologia",
+    "texto": "Para estágio ou primeiro emprego em tecnologia, descreva projetos, linguagens utilizadas, problema resolvido, decisões técnicas, testes e seu papel. Se houver repositório público, apresente-o sem expor segredos.",
+    "origem": "Material educativo original da equipe"
+  },
+  {
+    "id": "K08",
+    "titulo": "Privacidade na preparação",
+    "texto": "Evite incluir CPF, telefone, endereço, informações de saúde ou dados de terceiros nas respostas de treino. Compartilhe apenas informações necessárias para o exercício.",
+    "origem": "Material educativo original da equipe"
+  },
+  {
+    "id": "K09",
+    "titulo": "Feedback construtivo",
+    "texto": "Feedback útil distingue pontos fortes de melhorias acionáveis, relaciona sugestões ao conteúdo efetivamente dito e evita julgamentos definitivos sobre capacidade, personalidade ou empregabilidade.",
+    "origem": "Material educativo original da equipe"
+  },
+  {
+    "id": "K10",
+    "titulo": "Primeiro emprego e inclusão",
+    "texto": "A falta de emprego anterior não impede a demonstração de competências por projetos educativos, atividades de estudo e voluntariado. A orientação deve ser acessível, sem preconceitos ou promessas de contratação.",
+    "origem": "Material educativo original da equipe"
+  }
+]
