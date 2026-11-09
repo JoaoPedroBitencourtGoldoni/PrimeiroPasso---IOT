@@ -1,412 +1,275 @@
-# 🚀 PrimeiroPasso
-### EntrevistaLab — Preparação inteligente para o mercado de trabalho
+# PrimeiroPasso — EntrevistaLab
+### Global Solution 2026/2 | FIAP
 
-**Global Solution 2026/2 | FIAP**
-
-**Disruptive Architectures: IoT, IoB & Generative IA**
-
-`Python` `FastAPI` `Generative AI` `Ollama` `RAG` `REST API` `Pytest`
+**Disciplina:** Disruptive Architectures: IoT, IoB & Generative IA  
+**Tema:** CitizenTech — Tecnologia para inclusão e cidadania  
+**Tecnologias:** Python • FastAPI • Ollama • Llama 3.2 • RAG • Scikit-learn • Pytest
 
 ---
 
-## 📌 Sobre o projeto
+## Sobre o projeto
 
-O **PrimeiroPasso** é uma solução tecnológica voltada à preparação de jovens e pessoas que buscam sua primeira oportunidade profissional.
+O **PrimeiroPasso — EntrevistaLab** é uma solução educacional que utiliza inteligência artificial generativa e Retrieval-Augmented Generation (RAG) para ajudar jovens e pessoas sem experiência profissional a se prepararem para entrevistas de emprego.
 
-Por meio do módulo **EntrevistaLab**, a plataforma utiliza Inteligência Artificial Generativa e Recuperação Aumentada por Geração (RAG) para simular perguntas de entrevistas e oferecer feedback personalizado sobre as respostas dos participantes.
+A aplicação gera perguntas personalizadas conforme a área de interesse e oferece feedback educativo sobre as respostas dos candidatos, utilizando documentos de orientação profissional como base de conhecimento.
 
-A proposta é proporcionar uma experiência de aprendizado acessível, permitindo que os usuários desenvolvam habilidades de comunicação, organização de ideias e apresentação de suas experiências.
+A proposta está alinhada aos Objetivos de Desenvolvimento Sustentável:
 
-> **Nossa missão:** utilizar a tecnologia para ampliar o acesso à preparação profissional e contribuir para uma entrada mais confiante no mercado de trabalho.
+- **ODS 4:** Educação de Qualidade.
+- **ODS 8:** Trabalho Decente e Crescimento Econômico.
+- **ODS 10:** Redução das Desigualdades.
 
-O sistema possui finalidade exclusivamente educacional e não realiza avaliações ou decisões de contratação.
+> O PrimeiroPasso é uma ferramenta de preparação profissional, não uma plataforma de seleção ou decisão de contratação.
 
-## 🎯 Objetivos
+## Integrantes
 
-- Democratizar o acesso à preparação para entrevistas de emprego.
-- Auxiliar jovens sem experiência profissional a reconhecer suas competências.
-- Simular situações reais de processos seletivos.
-- Oferecer feedback personalizado por meio de IA generativa.
-- Incentivar respostas estruturadas e comunicação profissional.
-- Contribuir para a inclusão social e a empregabilidade.
-
-### 🌎 Alinhamento aos Objetivos de Desenvolvimento Sustentável
-
-| ODS | Objetivo | Contribuição |
+| RM | Nome completo | Turma |
 |---|---|---|
-| **ODS 4** | Educação de Qualidade | Promover aprendizado e desenvolvimento de competências |
-| **ODS 8** | Trabalho Decente e Crescimento Econômico | Apoiar a preparação para oportunidades profissionais |
-| **ODS 10** | Redução das Desigualdades | Ampliar o acesso a ferramentas de orientação profissional |
+| 563512 | Felipe Maglio Filho | 2TDSPF |
+| 564339 | João Pedro Bitencourt Goldoni | 2TDSPX |
+| 561786 | Marina Tamagnini Magalhães | 2TDSPX |
+| 564930 | Mateus Granja dos Santos | 2TDSPF |
+| 563509 | Vitória Valentina Maglio | 2TDSPX |
 
----
+## Funcionalidades
 
-## 🧠 Tecnologias utilizadas
+- Geração de perguntas personalizadas utilizando LLM real.
+- Feedback educativo com sugestões de melhoria.
+- Recuperação de informações por RAG.
+- Referências estruturadas das fontes utilizadas.
+- API REST documentada com Swagger.
+- Autenticação interna por chave de API.
+- Mascaramento parcial de dados pessoais.
+- Testes automatizados de funcionalidades, validação e segurança.
+- Execução local sem necessidade de serviços pagos.
 
-| Tecnologia | Aplicação |
-|---|---|
-| Python 3.11+ | Linguagem principal |
-| FastAPI | Desenvolvimento da API REST |
-| Ollama | Execução local de modelos de linguagem |
-| Llama 3.2 3B | Modelo de IA generativa |
-| RAG | Recuperação de conhecimento para contextualização |
-| TF-IDF | Representação textual dos documentos |
-| Similaridade cosseno | Identificação de conteúdos relevantes |
-| Pydantic | Validação de dados |
-| Pytest | Testes automatizados |
-| Swagger UI | Documentação e testes interativos da API |
+### Endpoints
 
-A arquitetura também permite utilizar um provedor de IA externo compatível com a API da OpenAI.
+| Método | Endpoint | Descrição |
+|---|---|---|
+| GET | `/health` | Verifica a disponibilidade básica da API |
+| GET | `/api/v1/fontes` | Consulta a base de conhecimento |
+| POST | `/api/v1/entrevistas/pergunta` | Gera perguntas com IA |
+| POST | `/api/v1/entrevistas/feedback` | Gera feedback personalizado |
 
-## ⚙️ Funcionalidades
+Documentação interativa: http://localhost:8000/docs
 
-### 1. Geração inteligente de perguntas
+## Arquitetura da solução
 
-O EntrevistaLab cria perguntas contextualizadas considerando a área profissional, o nível de experiência e os projetos informados pelo participante.
+O projeto utiliza uma arquitetura modular:
 
-**Endpoint:** `POST /api/v1/entrevistas/pergunta`
+**Usuário / Swagger → FastAPI → Recuperador RAG → Llama 3.2 via Ollama → Resposta com referências**
 
-### 2. Feedback personalizado
+### Componentes
 
-O sistema analisa a resposta enviada pelo usuário e produz orientações educacionais, incluindo:
+**FastAPI:** disponibiliza os endpoints REST, valida as requisições e controla o acesso aos recursos protegidos.
 
-- Pontos fortes da resposta.
-- Oportunidades de melhoria.
-- Sugestões de estruturação.
-- Exemplos de respostas aprimoradas.
-- Recomendações para continuar praticando.
+**Ollama:** executa localmente o modelo `llama3.2:3b`, responsável pela geração das perguntas e dos feedbacks.
 
-**Endpoint:** `POST /api/v1/entrevistas/feedback`
+**RAG:** recupera documentos relevantes da base educativa antes da geração da resposta.
 
-### 3. Recuperação de conhecimento com RAG
+**Scikit-learn:** implementa a representação TF-IDF e a similaridade cosseno.
 
-Antes de gerar orientações, o sistema consulta uma base de conhecimento sobre entrevistas e desenvolvimento profissional.
+**Pytest:** executa testes automatizados de API, validação, privacidade e tratamento de erros.
 
-O mecanismo utiliza **TF-IDF e similaridade cosseno** para selecionar até três fontes relevantes, aplicando um limiar de relevância.
+### Funcionamento do RAG
 
-Essa abordagem busca contextualizar as respostas do modelo e permitir a identificação das fontes utilizadas.
+O mecanismo utiliza:
 
-### 4. API documentada
+1. Base de conhecimento educativa em `knowledge/base.json`.
+2. Vetorização textual por TF-IDF.
+3. Cálculo de similaridade cosseno.
+4. Recuperação dos três documentos mais relevantes.
+5. Aplicação de limiar mínimo de relevância.
+6. Inclusão do contexto recuperado na geração da resposta.
+7. Retorno de referências estruturadas ao usuário.
 
-A aplicação disponibiliza documentação interativa por meio do Swagger UI, permitindo visualizar os endpoints e executar requisições.
+O TF-IDF foi escolhido por ser simples, interpretável, reproduzível e adequado ao tamanho reduzido da base de conhecimento.
 
-**Swagger:** `http://localhost:8000/docs`
+Como limitação, a recuperação lexical pode apresentar dificuldades com sinônimos e paráfrases. Uma evolução possível é utilizar embeddings semânticos e busca vetorial.
 
----
+Mais informações: `docs/arquitetura.md`.
 
-## 🏗️ Arquitetura da solução
-
-O PrimeiroPasso utiliza uma arquitetura modular, separando a camada de API, a recuperação de conhecimento e a comunicação com o modelo generativo.
-
-**Fluxo de processamento:**
-
-1. O usuário envia os dados da entrevista.
-2. A API valida a requisição e a chave interna.
-3. O sistema aplica mascaramento de determinados dados pessoais.
-4. O mecanismo RAG recupera conteúdos relevantes.
-5. O modelo de linguagem recebe o contexto recuperado.
-6. A IA gera a pergunta ou o feedback.
-7. A API retorna o resultado e as referências utilizadas.
-
-**Componentes principais:**
-
-- **API REST:** FastAPI.
-- **Validação:** Pydantic.
-- **Recuperação:** TF-IDF e similaridade cosseno.
-- **Inteligência Artificial:** Ollama com Llama 3.2 3B.
-- **Base de conhecimento:** documentos estruturados em JSON.
-- **Segurança:** chave interna e mascaramento parcial de dados.
-- **Qualidade:** testes automatizados e avaliações manuais.
-
-A documentação técnica detalhada está disponível em `docs/arquitetura.md`.
-
-## 📂 Estrutura do projeto
-
-```text
-PrimeiroPasso/
-│
-├── app/
-│   └── Aplicação FastAPI e módulos de IA
-│
-├── knowledge/
-│   └── base.json
-│
-├── tests/
-│   └── Testes automatizados
-│
-├── docs/
-│   ├── arquitetura.md
-│   └── avaliacao.md
-│
-├── evidencias/
-│   └── Registros e casos de teste
-│
-├── integracao-java/
-│   └── Exemplo de integração com Java
-│
-├── .env.example
-├── .gitignore
-├── IDENTIFICACAO_MODELO.txt
-├── requirements.txt
-└── README.md
-```
-
----
-
-## 💻 Como executar o projeto
+## Como executar
 
 ### Pré-requisitos
 
-Antes de iniciar, instale:
-
 - Python 3.11 ou superior.
-- Git.
-- Ollama, para executar a IA localmente.
+- Ollama instalado.
 - Modelo `llama3.2:3b`.
+- Dependências Python descritas em `requirements.txt`.
 
-### 1. Clonar o repositório
+### 1. Preparar o ambiente
 
-```bash
-git clone https://github.com/JoaoPedroBitencourtGoldoni/PrimeiroPasso---IOT.git
-
-cd PrimeiroPasso---IOT
-```
-
-### 2. Criar o ambiente virtual
-
-**Windows — PowerShell:**
-
-```powershell
-py -m venv .venv
-.\.venv\Scripts\Activate.ps1
-```
-
-**Windows — Git Bash:**
-
-```bash
-python -m venv .venv
-source .venv/Scripts/activate
-```
-
-### 3. Instalar as dependências
+No terminal do VS Code, dentro da pasta principal do projeto:
 
 ```bash
 python -m pip install -r requirements.txt
 ```
 
-### 4. Configurar as variáveis de ambiente
+Para um ambiente isolado, recomenda-se criar e ativar um ambiente virtual antes da instalação.
 
-Crie o arquivo `.env` a partir do exemplo disponibilizado no repositório.
+### 2. Configurar variáveis de ambiente
 
-**PowerShell:**
+Copie `.env.example` para um novo arquivo `.env` e ajuste as variáveis conforme as opções reconhecidas pela aplicação.
 
-```powershell
-Copy-Item .env.example .env
-```
+Configure o provedor Ollama, o endereço local do serviço, o modelo `llama3.2:3b` e uma chave interna aleatória e forte.
 
-**Git Bash:**
+**Nunca publique o arquivo `.env`, credenciais ou dados pessoais reais no GitHub.**
 
-```bash
-cp .env.example .env
-```
-
-Exemplo de configuração local:
-
-```env
-LLM_PROVIDER=ollama
-OLLAMA_URL=http://localhost:11434
-OLLAMA_MODEL=llama3.2:3b
-
-OPENAI_BASE_URL=https://api.openai.com/v1
-OPENAI_MODEL=gpt-4o-mini
-OPENAI_API_KEY=
-
-INTERNAL_API_KEY=DEFINA_SUA_CHAVE_LOCAL
-REQUEST_TIMEOUT=180
-```
-
-A variável `INTERNAL_API_KEY` deve receber uma chave aleatória segura.
-
-**Importante:** o arquivo `.env` é privado e não deve ser enviado ao GitHub.
-
-### 5. Preparar o modelo de IA
-
-Instale o Ollama e execute:
+### 3. Preparar o Ollama
 
 ```bash
 ollama pull llama3.2:3b
 ```
 
-Caso o serviço não esteja em execução:
+Se necessário, inicie o serviço:
 
 ```bash
 ollama serve
 ```
 
-### 6. Iniciar a API
+Caso o Ollama já esteja em execução, não é necessário iniciar uma segunda instância.
 
-Com o ambiente virtual ativado:
+### 4. Iniciar a API
 
 ```bash
 python -m uvicorn app.main:app --reload
 ```
 
-Acesse a documentação interativa:
+Acesse:
 
-**http://127.0.0.1:8000/docs**
+http://127.0.0.1:8000/docs
 
-A API estará disponível para receber requisições.
+Nos endpoints protegidos, informe o header `x-internal-api-key` com o valor configurado na aplicação.
 
----
+## Testes e validação
 
-## 🔗 Endpoints disponíveis
+A solução foi submetida a testes automatizados e a testes manuais utilizando o modelo Llama 3.2 em execução local.
 
-| Método | Endpoint | Descrição |
-|---|---|---|
-| GET | `/health` | Verifica o funcionamento básico da API |
-| GET | `/api/v1/fontes` | Lista as fontes da base de conhecimento |
-| POST | `/api/v1/entrevistas/pergunta` | Gera uma pergunta personalizada |
-| POST | `/api/v1/entrevistas/feedback` | Gera feedback educacional |
+### Resultados comprovados
 
-Os endpoints de entrevistas utilizam autenticação pelo cabeçalho:
+| Validação | Resultado |
+|---|---|
+| Testes automatizados com Pytest | 14/14 aprovados |
+| Avaliação automatizada do recuperador RAG | 2/2 casos aprovados |
+| Inicialização da API FastAPI | Concluída |
+| Execução local do modelo Llama 3.2 | Confirmada |
+| Geração de perguntas via API | HTTP 200 |
+| Geração de feedback via API | HTTP 200 |
+| Recuperação de fontes nas respostas | Confirmada nos dois testes manuais |
 
-```http
-x-internal-api-key: SUA_CHAVE_LOCAL
-```
+Os testes automatizados utilizam simulações do LLM em determinados cenários. A geração real foi verificada separadamente com Ollama, por meio do Swagger.
 
-### Exemplo — Gerar uma pergunta
-
-**POST** `/api/v1/entrevistas/pergunta`
-
-```json
-{
-  "area": "administrativa",
-  "nivel": "primeiro_emprego",
-  "projeto": "Organização de evento escolar"
-}
-```
-
-### Exemplo — Solicitar feedback
-
-**POST** `/api/v1/entrevistas/feedback`
-
-```json
-{
-  "area": "administrativa",
-  "nivel": "primeiro_emprego",
-  "projeto": "Organização de evento escolar",
-  "pergunta": "Conte sobre uma situação em que você trabalhou em equipe.",
-  "resposta": "Durante um projeto escolar, organizei as inscrições de um evento, distribuí tarefas entre meus colegas e acompanhei os prazos. Conseguimos concluir o evento dentro do prazo."
-}
-```
-
-O retorno contém o feedback gerado pela IA, as fontes recuperadas pelo RAG e um aviso sobre a finalidade educacional da solução.
-
----
-
-## 🧪 Testes e validação
-
-O projeto utiliza Pytest para verificar os principais componentes da aplicação.
-
-Os testes automatizados abrangem:
-
-- Funcionamento básico da API.
-- Validação de dados.
-- Autenticação por chave interna.
-- Recuperação de documentos.
-- Mascaramento de dados pessoais.
-- Tratamento de falhas do provedor de IA.
-- Geração de perguntas e feedback com modelo simulado.
-- Verificação de respostas dos endpoints.
-
-### Executar os testes
+### Executar testes automatizados
 
 ```bash
 python -m pytest -v
 ```
 
-**Resultado da validação local realizada:**
+Para registrar os resultados:
 
-**14 testes aprovados | 0 falhas**
+```bash
+python -m pytest -v > evidencias/pytest_resultados.txt
+```
 
-Os testes automatizados utilizam simulações do LLM e, portanto, não exigem Ollama em execução.
+### Avaliar a recuperação RAG
 
-Também foi realizado um teste manual de feedback com o modelo local, obtendo resposta HTTP 200, feedback gerado e referências recuperadas pelo RAG.
+```bash
+python -m scripts.avaliar_rag
+```
 
-Os procedimentos de avaliação estão documentados em `docs/avaliacao.md`.
+O comando gera o relatório:
 
-## 🔐 Segurança e privacidade
+`evidencias/resultado_rag.json`
 
-A aplicação adota mecanismos básicos de proteção:
+Esse relatório avalia a recuperação de informações, não a qualidade global das respostas do LLM.
 
-- Autenticação dos endpoints protegidos por chave interna.
-- Validação de entrada com Pydantic.
-- Comparação de credenciais com `secrets.compare_digest`.
+### Evidências
+
+A pasta `evidencias/` contém arquivos de apoio à validação, incluindo:
+
+- `teste_perguntas_ollama_http200.png` — execução real da geração de perguntas.
+- `teste_feedback_ollama_http200.png` — execução real do feedback.
+- `resultado_rag.json` — avaliação automatizada da recuperação.
+- `consultas_rag.csv` — consultas para análise do RAG.
+- `casos_teste.csv` — cenários para avaliação manual.
+- `pytest_resultados.txt` — resultados dos testes automatizados, quando gerado.
+
+As evidências demonstram o funcionamento dos endpoints e a recuperação de referências. Elas não substituem uma avaliação sistemática de precisão, fidelidade, viés e qualidade pedagógica das respostas.
+
+O protocolo de avaliação está descrito em `docs/avaliacao.md`.
+
+## Segurança e uso responsável
+
+O projeto adota medidas básicas de segurança e privacidade:
+
+- Proteção de endpoints por chave interna.
+- Comparação segura de credenciais.
 - Mascaramento parcial de CPF, e-mail e telefone.
-- Separação de configurações sensíveis em variáveis de ambiente.
-- Exclusão do `.env` do versionamento.
+- Validação das entradas recebidas.
+- Tratamento de indisponibilidade do provedor LLM.
+- Separação de configurações sensíveis por variáveis de ambiente.
 
-O mascaramento por expressões regulares não representa anonimização completa.
+O mascaramento por expressões regulares não garante anonimização completa.
 
-Para uma implantação em produção, são recomendados HTTPS, limitação de requisições, monitoramento, gestão de segredos e políticas de retenção de dados.
+A solução também possui limitações inerentes à IA generativa, incluindo possíveis alucinações, vieses, referências inadequadas e respostas imprecisas.
 
-## ☕ Integração com Java
+As recomendações são exclusivamente educativas. A aplicação não substitui profissionais de recrutamento e não toma decisões de contratação.
 
-O diretório `integracao-java/` contém um exemplo de cliente Java para comunicação com o serviço de IA.
+Em um ambiente de produção, seriam necessários controles adicionais, como HTTPS, limitação de requisições, políticas de retenção e gerenciamento seguro de segredos.
 
-A arquitetura prevê integração futura com um backend Spring Boot, responsável pela autenticação dos usuários, autorização e comunicação segura com o EntrevistaLab.
+## Integração futura com Java
 
-O cliente disponibilizado é demonstrativo. A integração ponta a ponta e uma implementação com Spring AI não fazem parte do escopo implementado neste repositório.
+O PrimeiroPasso foi desenvolvido como um serviço independente de inteligência artificial.
 
----
+A API Python, o recuperador RAG e o modelo Llama 3.2 podem ser executados e demonstrados diretamente pelo Swagger, sem dependência de Java.
 
-## ⚖️ Limitações e uso responsável
+O diretório `integracao-java/` contém um exemplo de cliente para futura integração com um backend Spring Boot.
 
-O PrimeiroPasso é uma ferramenta de apoio educacional.
+**A integração ponta a ponta com Java ainda não foi implementada.**
 
-As respostas geradas por IA podem apresentar imprecisões, interpretações incorretas ou informações não verificadas.
+A arquitetura permite uma integração futura, mantendo o serviço de IA desacoplado da aplicação principal.
 
-A qualidade das orientações depende da pergunta, dos documentos recuperados e do comportamento do modelo utilizado.
+Detalhes: `docs/plano_integracao.md`.
 
-A ferramenta não substitui orientação profissional especializada, não realiza seleção de candidatos e não garante oportunidades de emprego.
+## Documentação complementar
 
-## 🔮 Possibilidades de evolução
+| Documento | Conteúdo |
+|---|---|
+| `docs/arquitetura.md` | Arquitetura e decisões técnicas |
+| `docs/avaliacao.md` | Metodologia de avaliação e métricas |
+| `docs/plano_integracao.md` | Planejamento de integração futura |
+| `docs/roteiro_apresentacao.md` | Roteiro para apresentação presencial |
+| `knowledge/base.json` | Base de conhecimento educativa |
 
-O projeto poderá ser ampliado com:
+## Melhorias futuras
 
-- Interface web responsiva para os participantes.
-- Histórico de simulações de entrevistas.
-- Acompanhamento da evolução individual.
-- Simulações por área profissional.
-- Integração completa com backend Java.
-- Recursos de acessibilidade.
-- Avaliação de desempenho com métricas educacionais.
-- Ampliação da base de conhecimento e recuperação semântica.
+- Ampliação e revisão da base de conhecimento.
+- Avaliação com um conjunto maior de perguntas.
+- Recuperação semântica por embeddings.
+- Medição sistemática de latência e qualidade.
+- Interface web para simulação de entrevistas.
+- Histórico de evolução do candidato com consentimento.
+- Integração futura com backend Java.
+- Fortalecimento dos controles de segurança e observabilidade.
 
----
+## Entrega acadêmica
 
-## 🎓 Informações acadêmicas
-
-**Instituição:** FIAP — Faculdade de Informática e Administração Paulista
-
-**Projeto:** PrimeiroPasso — EntrevistaLab
-
-**Desafio:** Global Solution 2026/2 — CitizenTech
-
+**Instituição:** FIAP  
+**Global Solution:** 2026/2  
 **Disciplina:** Disruptive Architectures: IoT, IoB & Generative IA
 
-**Integrantes:** 
-- 563512 — Felipe Maglio Filho
-- 564339 — João Pedro Bitencourt Goldoni
-- 561786 — Marina Tamagnini Magalhães
-- 564930 — Mateus Granja dos Santos
-- 563509 — Vitória Valentina Maglio
+Repositório oficial:
 
-## 📦 Entrega
+https://github.com/JoaoPedroBitencourtGoldoni/PrimeiroPasso---IOT
 
-O repositório reúne o código-fonte, a documentação técnica, a base de conhecimento, os testes e as evidências do projeto.
+A entrega contempla código-fonte, documentação técnica, testes automatizados, evidências de execução e instruções de reprodução.
 
-O arquivo `IDENTIFICACAO_MODELO.txt` deve conter os dados dos integrantes e o endereço do repositório, conforme as orientações acadêmicas.
+O projeto utiliza IA generativa real em execução local e RAG, com validação dos principais endpoints.
+
+**Prazo informado no enunciado:** 19/11/2026 às 23h55, sujeito às orientações da disciplina.
 
 ---
 
-**PrimeiroPasso — Tecnologia, educação e oportunidades para transformar o início de uma trajetória profissional.**
+**PrimeiroPasso — Tecnologia para transformar preparação em oportunidade.**

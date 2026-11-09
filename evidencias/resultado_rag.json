@@ -1,0 +1,27 @@
+{
+  "metodo": "TF-IDF, cosseno, top-3, limiar 0.035",
+  "total": 2,
+  "aprovados": 2,
+  "taxa_acerto": 1.0,
+  "observacao": "Teste de recuperação; não é validação do texto do LLM.",
+  "casos": [
+    {
+      "caso": "R01",
+      "consulta": "Como organizar uma resposta pelo método STAR?",
+      "fonte_esperada": "K01",
+      "fontes_recuperadas": [
+        "K01",
+        "K05",
+        "K04"
+      ],
+      "aprovado": true
+    },
+    {
+      "caso": "R02",
+      "consulta": "zzzxqv_123_xyz",
+      "fonte_esperada": null,
+      "fontes_recuperadas": [],
+      "aprovado": true
+    }
+  ]
+}

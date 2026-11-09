@@ -1,10 +1,11 @@
-GLOBAL SOLUTION 2026/2 — DISRUPTIVE ARCHITECTURES
+GLOBAL SOLUTION 2026/2 — DISRUPTIVE ARCHITECTURES: IoT, IoB & GENERATIVE IA
 Projeto: PrimeiroPasso — EntrevistaLab
+Repositório: https://github.com/JoaoPedroBitencourtGoldoni/PrimeiroPasso---IOT
+
 Integrantes:
-- 563512 — Felipe Maglio Filho
-- 564339 — João Pedro Bitencourt Goldoni
-- 561786 — Marina Tamagnini Magalhães
-- 564930 — Mateus Granja dos Santos
-- 563509 — Vitória Valentina Maglio
-Repositório GitHub: https://github.com/JoaoPedroBitencourtGoldoni/PrimeiroPasso---IOT
+- RM: 563512 | Nome completo: Felipe Maglio Filho | Turma: 2TDSPF
+- RM: 564339 | Nome completo: João Pedro Bitencourt Goldoni | Turma: 2TDSPX
+- RM: 561786 | Nome completo: Marina Tamagnini Magalhães | Turma: 2TDSPX
+- RM: 564930 | Nome completo: Mateus Granja dos Santos | Turma: 2TDSPF
+- RM: 563509 | Nome completo: Vitória Valentina Maglio | Turma: 2TDSPX
 
