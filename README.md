@@ -1,4 +1,4 @@
-# PrimeiroPasso — EntrevistaLab
+# Ventrya
 ### Global Solution 2026/2 | FIAP
 
 **Disciplina:** Disruptive Architectures: IoT, IoB & Generative IA  
@@ -9,7 +9,7 @@
 
 ## Sobre o projeto
 
-O **PrimeiroPasso — EntrevistaLab** é uma solução educacional que utiliza inteligência artificial generativa e Retrieval-Augmented Generation (RAG) para ajudar jovens e pessoas sem experiência profissional a se prepararem para entrevistas de emprego.
+O **Ventrya** é uma solução educacional que utiliza inteligência artificial generativa e Retrieval-Augmented Generation (RAG) para ajudar jovens e pessoas sem experiência profissional a se prepararem para entrevistas de emprego.
 
 A aplicação gera perguntas personalizadas conforme a área de interesse e oferece feedback educativo sobre as respostas dos candidatos, utilizando documentos de orientação profissional como base de conhecimento.
 
@@ -272,4 +272,4 @@ O projeto utiliza IA generativa real em execução local e RAG, com validação 
 
 ---
 
-**PrimeiroPasso — Tecnologia para transformar preparação em oportunidade.**
+**Ventrya — Tecnologia para transformar preparação em oportunidade.**
